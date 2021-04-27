@@ -5,6 +5,8 @@ type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["iOS", "Swift", "WKWebView"]
 published: true
 ---
+# Webブラウザアプリ開発者待望の新機能
+
 iOS 14.5未満のWKWebViewは`blob:`ではじまるURLのダウンロード、つまりJavaScriptで生成されたBlobオブジェクトのダウンロードにネイティブ対応していませんでした。BlobオブジェクトはWKWebView上のメモリに存在するため、単純にURLを指定するだけではダウンロードできず、以下のようにWKWebViewと連携するJavaScriptを実行してData URLに変換するなどの工夫が必要でした。
 
 - https://luke-1220.github.io/post/webview-dl/
@@ -51,7 +53,7 @@ extension ViewController: WKNavigationDelegate {
 
 ## 手順２. WKDownloadDelegateの実装
 
-WKDownload用に新規追加されたWKDownloadDelegateプロトコルの`download(_:decideDestinationUsing:suggestedFilename:completionHandler:)`を以下のように実装します。`suggestedFilename`によって提示されたファイル名からダウンロード先のURLを決定し、`completionHandler()`に渡してあげます。ここでは`tmp`ディレクトリ直下にそのまま保存するようにしています。
+WKDownload用に新規追加されたWKDownloadDelegateプロトコルの`download(_:decideDestinationUsing:suggestedFilename:completionHandler:)`を以下のように実装します。`suggestedFilename`によって提示されたファイル名からダウンロード先のURLを決定し、`completionHandler()`に渡してあげます。ここでは`tmp`ディレクトリ直下にそのまま保存するようにしてみました。
 
 ```swift
 extension ViewController: WKDownloadDelegate {
