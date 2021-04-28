@@ -26,7 +26,7 @@ iOS 14.5未満のWKWebViewは`blob:`ではじまるURLのダウンロード、�
 
 ## 手順１. WKNavigationDelegateの実装
 
-WKNavigationDelegateプロトコルの`webView(_:decidePolicyFor:preferences:decisionHandler:)`を以下のように実装します。`blob:`ではじまるURLがリクエストされたときに、`decisionHandler()`で新しく追加された`.download`を返すことでダウンロードの準備がはじまります。
+WKNavigationDelegateプロトコルの`webView(_:decidePolicyFor:preferences:decisionHandler:)`を以下のように実装します。`blob:`ではじまるURLがリクエストされたときに、`decisionHandler()`の引数としてWKNavigationActionPolicyに新しく追加された`.download`を返すと、ダウンロードの準備がはじまります。
 
 ```swift
 extension ViewController: WKNavigationDelegate {
@@ -41,7 +41,7 @@ extension ViewController: WKNavigationDelegate {
 ...
 ```
 
-さらに、新しく追加されたデリゲートメソッドである`webView(_:navigationAction:didBecome:)`も実装します。`WKDownload`というWKWebView上でのダウンロードを担当するクラスのインスタンスが渡されるので、その`delegate`プロパティを指定してあげます。これにより、ダウンロード先の指定などができるようになります。
+そうすると、新しいデリゲートメソッドである`webView(_:navigationAction:didBecome:)`が呼ばれるようになります。このメソッドに`WKDownload`というWKWebView上でのダウンロードを担当するクラスのインスタンスが渡されるので、その`delegate`プロパティを指定してあげます。これにより、ダウンロード先の指定などができるようになります。
 
 ```swift
 ...
@@ -90,7 +90,7 @@ class ViewController: UIViewController {
 
 # おまけ１: Blobオブジェクト以外もダウンロードできるようにする
 
-WKNavigationActionに新しく`shouldPerformDownload`というプロパティが追加されているので、それを使うとダウンロード対象のリクエストかどうかを判断することができます。`blob:`のときにはこれが`true`になるので、`webView(_:decidePolicyFor:preferences:decisionHandler:)`を以下のように実装することもできます。
+WKNavigationActionに新しく`shouldPerformDownload`というプロパティが追加されており、それを使うとダウンロード対象のリクエストかどうかを判断することができます。`blob:`のときにはこれが`true`になるので、`webView(_:decidePolicyFor:preferences:decisionHandler:)`を以下のように実装することもできます。
 
 ```swift
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
