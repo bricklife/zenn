@@ -13,7 +13,7 @@ iOS向けSwift PackageのPackage.swiftでターゲットバージョンを設定
     ],
 ```
 
-[文字列でバージョン指定できるイニシャライザ](https://developer.apple.com/documentation/swift_packages/supportedplatform/3112758-ios)を使うと、こんな感じでマイナーバージョン単位やパッチバージョン単位でも設定できるようになります。
+[文字列でバージョン指定できるほうのメソッド](https://developer.apple.com/documentation/swift_packages/supportedplatform/3112758-ios)を使うと、こんな感じでマイナーバージョン単位やパッチバージョン単位でも設定できるようになります。
 
 ```swift
     platforms: [
