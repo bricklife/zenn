@@ -130,3 +130,14 @@ https://www.nintendo.com/games/detail/game-builder-garage-switch/
 |82|カメラ画角ノードン| |
 |83|あたまノードン| |
 |84|てノードン| |
+
+# Nintendo Laboとの比較
+
+Nintendo Laboでもノードベースのプログラミング環境が用意されており、Labo特有のノード以外は大体引き継いでいるようにみえます。事前に以下のサイトなどを見ておくとイメージがつきやすいのではないでしょうか。ただしカテゴリー分けが一部違っているので注意してください。
+
+- 入力 https://bright-b.com/toy-con-garage-vr-input-node-8497/
+- 中間 https://bright-b.com/toy-con-garage-vr-middle-node-9773/
+- 出力 https://bright-b.com/toy-con-garage-vr-output-node-9782/
+
+
+
