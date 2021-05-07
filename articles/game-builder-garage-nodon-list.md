@@ -5,7 +5,7 @@ type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["NintendoSwitch"]
 published: true
 ---
-任天堂から「ナビつき！ つくってわかる はじめてゲームプログラミング」というNintendo Swift用ソフトが発表されました。ノードベースのゲームプログラミング環境です。
+任天堂から「ナビつき！ つくってわかる はじめてゲームプログラミング」というNintendo Switch用ソフトが発表されました。ノードベースのゲームプログラミング環境です。
 
 https://www.nintendo.co.jp/switch/awuxa/index.html
 
