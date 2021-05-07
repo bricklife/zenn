@@ -103,7 +103,7 @@ https://www.nintendo.com/games/detail/game-builder-garage-switch/
 |55|ことばつきモノノードン| |
 |56|数つきモノノードン| |
 |57|テクスチャノードン|自分で描いた絵を表示できる|
-|58|さわっているセンサーノードン|センサーノードン9種はモノに設置するノードン？|
+|58|さわっているセンサーノードン| |
 |59|こわしたしゅんかんセンサーノードン| |
 |60|こわれているセンサーノードン| |
 |61|つかまれているセンサーノードン| |
@@ -138,6 +138,3 @@ Nintendo Laboでもノードベースのプログラミング環境が用意さ�
 - 入力 https://bright-b.com/toy-con-garage-vr-input-node-8497/
 - 中間 https://bright-b.com/toy-con-garage-vr-middle-node-9773/
 - 出力 https://bright-b.com/toy-con-garage-vr-output-node-9782/
-
-
-
